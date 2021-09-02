@@ -1,0 +1,11 @@
+.venv/
+*.egg-info
+.vscode/
+.git/
+*/__pycache__/
+.github/
+.pytest_cache/
+.coverage
+cdk*
+cdk.out/
+tests/

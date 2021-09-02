@@ -1,0 +1,1 @@
+An AWS Lambda function template that gets deployed via AWS CDK.
