@@ -1,26 +1,30 @@
 [tool.poetry]
-name = "lit-lambdas"
+name = "lit_lambdas"
 version = "0.1.0"
 description = ""
 authors = ["Uriel Mandujano <uriel.mandujano14@gmail.com>"]
-packages = [
-    { include = "lit_lambdas", from = "lit_lambdas" },
-]
+packages = [{ include = "api", from = "lit_lambdas" }]
 
 [tool.poetry.dependencies]
 python = "^3.8"
 httpx = "^0.19.0"
-structlog = "^21.1.0"
 pydantic = "^1.8.2"
+aws-lambda-powertools = "^1.22.0"
+arrow = "^1.2.1"
+boto3 = "^1.20.20"
+boto3-stubs = {extras = ["essential"], version = "^1.20.20"}
+orjson = "^3.6.5"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.0"
 black = "^21.6b0"
 mypy = "^0.902"
 isort = "^5.8.0"
-"aws-cdk.aws-lambda" = "^1.108.1"
-"aws-cdk.core" = "^1.108.1"
-"aws-cdk.aws-lambda-python" = "^1.119.0"
+"aws-cdk.aws-lambda" = "^1.137.0"
+"aws-cdk.core" = "^1.137.0"
+"aws-cdk.aws-lambda-python" = "^1.137.0"
+"aws-cdk.aws-apigateway" = "^1.137.0"
+"aws-cdk.aws-dynamodb" = "^1.137.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
@@ -33,6 +37,13 @@ src_paths = ["lit_lambdas", "test", "cdk"]
 [tool.mypy]
 python_version = "3.8"
 ignore_missing_imports = true
+exclude = [
+    "^.venv$",
+    "^cdk.out$",
+    ".venv",
+    ".pytest_cache"
+]
+    
 
 [tool.pytest.ini_options]
 minversion = "6.0"
