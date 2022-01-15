@@ -23,7 +23,7 @@ move:
 
 # remove poetry files post deployment
 remove:
-    @rm lit_lambdas/{pyproject.toml,poetry.lock}
+    @rm lit_lambdas/{pyproject.toml,poetry.lock,requirements.txt}
 
 # deploy the project to AWS
 deploy: move && remove
