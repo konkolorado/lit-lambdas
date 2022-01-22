@@ -42,6 +42,7 @@ To remove the project:
 Dynamo
 ^^^^^^
 The lambda's dynamo table enables the following access patterns:
+
 * Get all of a user's actions
 * Get an action by its action ID
 * Get all of a user's actions by creation time
@@ -50,6 +51,7 @@ The lambda's dynamo table enables the following access patterns:
 
 TODO
 ^^^^
+
 * What kind of errors can the dynamo operations trigger?
 * Decide on what the 'Action' should be
 * Add pagination on queries that can return more than 1MB data
